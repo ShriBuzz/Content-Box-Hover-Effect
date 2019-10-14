@@ -14,7 +14,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  margin: 0 50px;
+  margin: 0 80px;
   align-items: center;
   overflow-x: scroll;
   white-space: nowrap;
@@ -22,6 +22,37 @@
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.scroll .left-scroll {
+  left: 0;
+}
+
+.scroll .right-scroll {
+  right: 0;
+}
+
+.scroll .left-scroll,
+.scroll .right-scroll {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  padding: 0 2vw;
+  overflow-x: hidden;
+  z-index: 1;
+  justify-content: center;
+  -webkit-justify-content: center;
+  position: absolute;
+  height: 100%;
+}
+
+.scroll .left-scroll p,
+.scroll .right-scroll p {
+  font-size: 3em;
+  color: white;
+  text-shadow: 0 0 10px #333;
+  margin: 0;
 }
 
 .sec1 .card {
