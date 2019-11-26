@@ -18,6 +18,18 @@ nav.black {
 
 nav .logo {
   float: left;
+  font-size: 24px;
+}
+
+nav .menu-icon {
+  width: 100%;
+  /* background: #000; */
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
 }
 
 nav .logo img {
@@ -38,6 +50,7 @@ nav ul {
 
 nav ul li {
   list-style: none;
+  display: inline-block;
 }
 
 nav ul li a {
@@ -65,4 +78,51 @@ nav ul li a:hover {
     rgba(246, 243, 243, 0.023144291896446068) 100%
   );
   /* background: rgb(92, 92, 92); */
+}
+
+@media (max-width: 580px) {
+  nav .logo {
+    position: fixed;
+    top: 0;
+    margin-top: 16px;
+    float: left;
+    padding-left: 0;
+  }
+
+  nav .logo img {
+    height: 50px;
+  }
+
+  nav ul {
+    display: inline-block;
+    overflow: hidden;
+    max-height: 0px;
+    background: rgb(0, 0, 0, 0.8);
+    margin-top: 4em;
+  }
+
+  nav.black ul {
+    background: rgb(0, 0, 0, 0.8);
+  }
+
+  .showing {
+    max-height: 20em;
+  }
+
+  nav ul li {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 20px;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    line-height: 50px;
+  }
+
+  nav .menu-icon {
+    display: block;
+  }
 }

@@ -14,6 +14,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script type="text/javascript">
+      $(document).ready(function(){
+        $(".menu-icon").on("click", function(){
+          $('nav ul').toggleClass('showing');
+        })
+      })
+
       $(window).on('scroll', function(){
         if($(window).scrollTop()){
           $('nav').addClass('black');
@@ -28,6 +34,9 @@
   </head>
   <body>
     <nav>
+      <div class="menu-icon">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
       <div class="logo">
         <img src="logo_w.png">
       </div>
@@ -300,7 +309,7 @@
     <section id="timeline" class="sec4">
       <div class="item">
         <div class="item_bg" style="background-image: url(./assets/1.jpg);">
-          <div class="year">
+          <div class="type_one">
             <img src="./assets/electric.png"/>
           </div>
           <div class="content_one">
@@ -312,10 +321,18 @@
 
       <div class="item">
         <div class="item_bg" style="background-image: url(./assets/2.jpg);">
-          <div class="year">
+          <div class="type_one">
             <img src="./assets/fire.png"/>
           </div>
-          <div class="content_one">
+        
+          <div class="content_one"  style="background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 85%
+          );
+          width: 100%;
+          height: 100%;" >
+            <!-- <div class="back" ></div> -->
             <h1>Charmandar</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, dolores sapiente commodi delectus fugit aut doloribus assumenda quaerat harum et nemo temporibus! Reiciendis fugiat dolor voluptatum aliquid distinctio, reprehenderit inventore?</p>
           </div>
@@ -324,7 +341,7 @@
 
       <div class="item">
         <div class="item_bg" style="background-image: url(./assets/3.jpg);">
-          <div class="year">
+          <div class="type_one">
             <img src="./assets/water.png"/>
           </div>
           <div class="content_one">
@@ -336,7 +353,7 @@
 
       <div class="item">
         <div class="item_bg" style="background-image: url(./assets/4.jpg);">
-          <div class="year">
+          <div class="type_one">
             <img src="./assets/grass.png"/>
           </div>
           <div class="content_one">
@@ -346,6 +363,6 @@
         </div>
       </div>
     </section>
-    
+
   </body>
 </html>
